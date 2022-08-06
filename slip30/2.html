@@ -1,0 +1,50 @@
+<html>
+<body><script>
+function foo()
+{
+	var a=document.getElementById("txt").value;
+	var b=document.getElementById("pass").value;
+	var exp=/^[A-Za-z]+$/;
+	var acnt=0;
+	var dcnt=0;
+	if(a[0].match(exp))
+		true;
+	else
+	{
+		document.getElementById("t").innerHTML="E-mail must start with an alphabet only";
+		return false;
+	}
+	for(var i=0;i<a.length;i++)
+	{
+		if(a[i]=="@")
+			acnt++;
+		if(a[i]==".")
+			dcnt++;
+	}
+	if(acnt>2)
+	{
+		document.getElementById("t").innerHTML="E-mail cannot contain more than two @ character ";
+		return false;
+	}
+	if(dcnt>3)
+	{
+		document.getElementById("t").innerHTML="E-mail cannot contain more than three . (dots) ";
+		return false;
+	}
+	if(b.length<8)
+	{
+		document.getElementById("p").innerHTML="Password must be of 8 characters atleast";
+		return false;
+	}
+	alert("Valid");		
+}
+</script>
+<form >
+Enter the e-mail id: <input type="textbox" name='t1' id="txt"></input><br>
+<span  id="t" style="color:red;"></span><br><br>
+Enter password :
+<input type="password" name="t2" id="pass" ></input><br>
+<span  id="p" style="color:red;"></span><br><br>
+<input type="button" value="check" onclick=foo()></input>
+</form>
+</body></html>

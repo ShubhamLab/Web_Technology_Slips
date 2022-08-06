@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+var arr=new Array();
+document.write("<br><u>Select your choice</u><br>");
+document.write("<br>1)Insert elements in the stack");
+document.write("<br>2)Delete elements from the stack");
+document.write("<br>3)Display contents of the stack");
+var ch=parseInt(prompt("Enter the choice"));
+do{
+switch(ch)
+{
+	case 1:var x=prompt("Enter the element to be inserted");
+		arr.push(x);
+		document.write("<br>Element inserted<br>");
+		break;
+	case 2:var x=arr.pop();
+		document.write("<br>Deleted element is : "+x+"<br>");
+		
+		break;
+	case 3:document.write("<br>Contents of the array are:<br>");
+		for(var i=0;i<arr.length;i++)
+		{
+			document.write(arr[i]+" ");
+		}
+		break;
+}
+}while(ch!=4);
+</script>
+</body>
+</html>

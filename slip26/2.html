@@ -1,0 +1,48 @@
+<html>
+<script>
+var dt=new Date();
+var day=dt.getDay();
+day+=1;
+switch(day)
+{
+	case 1:day="Sunday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 2:day="Monday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 3:day="Tuesday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 4:day="Wednesday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 5:day="Thursday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 6:day="Friday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+	case 7:day="Saturday";
+		document.write("TODAY's DAY IS : "+day+"<br>");
+		break;
+}
+var date=dt.getDate();
+document.write("TODAY's DATE IS : "+date+"<br>");
+var month=dt.getMonth();
+month+=1;
+document.write("Month IS : "+month+"<br>");
+var year=dt.getFullYear();
+document.write("Year IS : "+year+"<br>");
+var hour=dt.getHours();
+if(hour>=20)
+	alert("GOOD NIGHT");
+else if(hour>=5)
+	alert("GOOD MORNING");
+else if(hour>=12)
+	alert("GOOD AFTERNOON");
+else if(hour>=16)
+	alert("GOOD EVENING");
+</script></html>
+
+ 

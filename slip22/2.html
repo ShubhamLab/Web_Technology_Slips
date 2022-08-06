@@ -1,0 +1,34 @@
+<html>
+<head><style>
+#ch
+{
+	height:500px;
+	width:600px;
+	background-color:"white";
+	color:white;
+	margin:auto;
+	text-align:center;
+	text-decoration:underline;
+	font-weight:bold;
+	font-size:40;
+}
+</style>
+</head>
+<body>
+<script>
+var arr=["red","blue","green","coral","lightblue","pink"];
+var i=0;
+function change()
+{
+	document.getElementById("ch").style.backgroundColor=arr[i];
+	if(i<arr.length)
+		i++;
+	else
+		i=0;
+}
+setInterval(change,2000)
+</script>
+<div id="ch">
+BACKGROUND COLOUR CHANGE</div>
+
+</body></html>

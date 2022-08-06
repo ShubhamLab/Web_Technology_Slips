@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+#c
+{
+	color:green;
+	font-size:56px;
+	text-align:center;
+}
+
+body
+{	
+	background-color:black;
+}
+</style>
+</head>
+<script>
+function get()
+{
+	var d=new Date();
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var s=d.getSeconds();
+	if(h<10)
+		h="0"+h;
+	if(m<10)
+		m="0"+m;
+	if(s<10)
+		s="0"+s;
+	var c=h+"::"+m+"::"+s;
+	document.getElementById('c').innerHTML=c;
+	var t=setTimeout(get,500);
+}
+
+</script>
+<body onload="get()">
+<div id="c"></div>
+</body>
+</html>

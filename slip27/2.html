@@ -1,0 +1,51 @@
+<html>
+<head>
+<script>
+function validate()
+{
+	var u=document.getElementById("txt").value;
+	var p=document.getElementById("pass").value;
+	var exp=/^[a-zA-Z]+$/;
+	var num=/^[0-9]+$/;
+	if(!u.match(exp))
+	{
+		document.getElementById("s1").innerHTML="***Username cannot conatin numbers and special characters***";
+		return false;
+	}
+	if(u.length!=20)
+	{
+		document.getElementById("s1").innerHTML="***Username should be of 20 characters***";
+		return false;
+	}
+	if(p=="")
+	{
+		document.getElementById("s2").innerHTML="***This field cannot be empty***";
+		return false;
+	}
+	var cnt=0;
+	for(i=0;i<p.length;i++)
+	{
+		if(p[i].match(num))
+			cnt++;
+	}
+	if(cnt==0)
+	{
+		document.getElementById("s2").innerHTML="***This field must conatin atleast one digit***";
+		return false;
+	}
+	alert("Login Successful");
+}
+
+</script>
+</head><body>
+<form>
+Enter username :
+<input type="textbox" name="t1" id="txt"></input><br>
+<span id="s1" style="color:red;"></span><br><br>
+Enter password :
+<input type="password" name="t2" id="pass"></input><br>
+<span id="s2" style="color:red;"></span><br><br>
+<input type="button" value="submit" onclick="validate()"></input>
+
+</form>
+</body></html>

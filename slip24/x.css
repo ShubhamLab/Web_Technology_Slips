@@ -1,0 +1,15 @@
+p
+{
+	font-size:15;
+	font-style:italics;
+}
+
+#left
+{
+	float:left;
+}
+
+#right
+{
+	float:right;
+}
