@@ -1,0 +1,43 @@
+<html>
+<body>
+<script>
+function fun()
+{
+	var exp=/^[a-zA-Z]+$/;
+	var a=document.getElementById("text").value;
+	var b=document.getElementById("passwords").value;
+	if(a=="")
+	{
+		document.getElementById("msg").innerHTML="**PLEASE FILL THIS FIELD";
+		return false;
+	}
+	if(b=="")
+	{
+		document.getElementById("messages").innerHTML="**PLEASE FILL THIS FIELD";
+		return false;
+	}
+	if(a.match(exp))
+		true;
+	else
+	{
+		document.getElementById("msg").innerHTML="**THIS FIELD MUST CONTAIN ONLY ALPHABETS";
+		return false;
+	}
+	if(b.length<8)
+	{
+		document.getElementById("messages").innerHTML="**PASSWORD CANNOT BE LESS THAN 8";
+		return false;
+	}			
+}	
+</script>
+<h1 style="text-align:center;">USER LOGIN</h1>
+<form onsubmit="return fun()">
+User name: 
+<input type="text" id="text"><br>
+<span style="color:red;" id="msg"></span><br><br>
+Password :
+<input type="password" id="passwords" value="">
+<span id="messages" style="color:red;"></span><br><br>
+<input type="submit" value="Submit">
+</form>
+</body></html>

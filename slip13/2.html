@@ -1,0 +1,54 @@
+<html>
+<body>
+<script>
+function fun()
+{
+	var num=/^[0-9]+$/;
+	var a=document.getElementById("sal").value;
+	var b=document.getElementById("hra").value;
+	var c=document.getElementById("da").value;
+	if(a.match(num))
+		true;
+	else
+	{
+		document.getElementById("s1").innerHTML="**SALARY MUST BE IN DIGITS ONLY";
+		return false;
+	}
+	if(b.match(num))
+		true;
+	else
+	{
+		document.getElementById("s2").innerHTML="**HRA MUST BE IN DIGITS ONLY";
+		return false;
+	}
+	if(c.match(num))
+		true;
+	else
+	{
+		document.getElementById("s3").innerHTML="**DA MUST BE IN DIGITS ONLY";
+		return false;
+	}
+	var res=Math.floor(a+b+c);
+	document.write("NET SALARY ="+res);	
+}	
+</script>
+<h1 style="text-align:center;">PAY SLIP</h1>
+<form>
+Name of Employee: 
+<input type="text" name="t1" value=""><br>
+Department :
+<input type="text" name="t2" value=""><br>
+Designation :
+<input type="text" name="t3" value=""><br>
+Basic Salary :
+<input type="text" name="t1" id="sal" value="">
+<span id="s1" style="color:red;"></span><br>
+HRA :
+<input type="text" name="t1" id="hra" value="">
+<span id="s2" style="color:red;"></span><br>
+DA :
+<input type="text" name="t1" id="da" value="">
+<span id="s3" style="color:red;"></span><br>
+<button type="button" onclick=fun()>Submit</button>
+</form>
+</body></html>

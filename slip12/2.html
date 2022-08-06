@@ -1,0 +1,30 @@
+<html>
+<body><script>
+var arr=new Array();
+var n=prompt("Enter the number of elements");
+var i;
+for(i=0;i<n;i++)
+	arr[i]=prompt("Enter the element");
+var maxi=arr[0];
+for(i=1;i<n;i++)
+{
+	if(arr[i]>maxi)
+		maxi=arr[i];
+}
+document.write("MAXIMUM = "+maxi+"<br>");
+var mini=arr[0];
+for(i=1;i<n;i++)
+{
+	if(arr[i]<mini)
+		mini=arr[i];
+}
+document.write("MINIMUM = "+mini+"<br>");
+var sum=0;
+for(i=0;i<n;i++)
+{
+	sum=sum+parseInt(arr[i]);
+}
+document.write("SUM = "+sum+"<br>");
+var avg=sum/n;
+document.write("AVERAGE = "+avg+"<br>");
+</script></body></html>

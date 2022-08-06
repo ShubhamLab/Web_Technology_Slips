@@ -1,0 +1,40 @@
+<html>
+<body><script>
+function foo()
+{
+	var a=document.getElementById("txt").value;
+	var exp=/^[A-Za-z]+$/;
+	var cnt=0;
+	var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(a[0].match(exp))
+		true;
+	else
+	{
+		document.getElementById("t").innerHTML="E-mail must start with an alphabet only";
+		return false;
+	}
+	
+	for(var i=0;i<a.length;i++)
+	{
+		if(a[i]=="@")
+			cnt++;
+	}
+	if(cnt!=1)
+	{
+		document.getElementById("t").innerHTML="E-mail must contain only one @ character ";
+		return false;
+	}
+	if(a.match(re))
+		true;
+	else	
+	{	alert("You have entered invalid e-mail address!!");
+		return false;
+	}		
+}
+</script>
+<form onsubmit="return foo()" >
+Enter the e-mail id: <input type="textbox" name='t1' id="txt" size=40></input><br>
+<span  id="t" style="color:red;"></span><br><br>
+<input type="submit" value="check" ></input>
+</form>
+</body></html>

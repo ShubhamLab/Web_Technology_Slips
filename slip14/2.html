@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function check()
+{
+	var a=document.getElementById("lstr").value;
+	var b=document.getElementById("sstr").value;
+	var f=a.indexOf(b);
+	if(f!=-1)
+	{
+		f=f+1;	
+		document.write("First occurrence is at position : "+f+"<br>");
+	}
+	else
+		document.write("Small string not present in large string");
+	var l=a.lastIndexOf(b);
+	if(l!=-1)
+	{
+		l=l+1;
+		document.write("Last occurrence is at position : "+l);
+	}
+	else
+		document.write("Small string not present in large string");
+}
+
+</script>
+</head>
+<body>
+<form onsubmit="return check()">
+Enter the large string :
+<input type="textbox" name='t1' id="lstr"></input><br>
+Enter the small string :
+<input type="textbox" name='t2' id="sstr"></input><br>
+<input type="submit" value="check occurrence" ></input><br>
+</form></body></html>

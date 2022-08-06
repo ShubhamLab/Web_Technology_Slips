@@ -1,0 +1,49 @@
+<html>
+<body>
+<script>
+function fun()
+{
+	var a=document.getElementById("passwords").value;
+	var b=document.getElementById("user").value;
+	var exp=/^[A-Za-z]+$/;
+	var num=/^[0-9]+$/;
+	if(b=="")
+	{
+		document.getElementById("txt").innerHTML="**PLEASE FILL THIS FIELD";
+		return false;
+	}
+	if(b.match(exp))
+		true;
+	else
+	{
+		document.getElementById("txt").innerHTML="**THIS FIELD MUST CONTAIN ONLY ALPHABETS";
+		return false;
+	}
+	if(a=="")
+	{
+		document.getElementById("messages").innerHTML="**PLEASE FILL THIS FIELD";
+		return false;
+	}
+	if(a!=num)
+	{
+		document.getElementById("messages").innerHTML="THIS FIELD MUST CONTAIN DIGITS ONLY";
+		return false;
+	}
+	if(a.length!=10)
+	{
+		document.getElementById("messages").innerHTML="NUMBER MUST BE OF 10 DIGITS ONLY";
+		return false;
+	}	
+}	
+</script>
+<h1 style="text-align:center;">USER LOGIN</h1>
+<form onsubmit="return fun()">
+Name: 
+<input type="text" name="t1" id="user" value="">
+<span id="txt" style="color:red;"></span><br><br>
+Number :
+<input type="text" id="passwords" value="">
+<span id="messages" style="color:red;"></span><br><br>
+<input type="submit" value="Submit">
+</form>
+</body></html>
