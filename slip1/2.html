@@ -1,0 +1,28 @@
+<html><head><script>
+function check()
+{
+	var a=document.getElementById("pass").value;
+	var b=document.getElementById("pas").value;
+	if(a==b)
+		true;
+	else
+	{
+		document.getElementById("cpas").innerHTML="**PASSWORDS ARE NOT SAME**<br>PLEASE TRY AGAIN";
+		return false;
+	}
+	alert("LOGIN SUCCESSFUlL");
+}
+</script></head>
+<body>
+<form>
+<center>
+USERNAME :
+<input type="textbox" name='t1'><br><br>
+PASSWORD :
+<input type="password" name='t2' id='pass'><br><br>
+CONFIRM PASSWORD :
+<input type="password" name='t3' id='pas'><br><br>
+<span id="cpas" style="color:red;"></span><br><br><br>
+<input type="submit" value="Login" onclick="return check()">
+</center>
+</form></body></html>

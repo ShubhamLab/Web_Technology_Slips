@@ -1,0 +1,18 @@
+<html>
+<head>
+<script>
+function cont(str)
+{
+	var s=new String();
+	s=str.value;
+	var m=s.split(" ").length;
+	return document.getElementById("f").innerHTML="Count = "+m;
+}
+</script>
+</head>
+<body>
+<form name=f1 id="f">
+Enter the string :<input type="textbox" name='t1' id="txt"></input><br>
+<input type="submit" value="chk_word" onclick="cont(document.f1.txt)"></input>
+</form>
+</body></html>
